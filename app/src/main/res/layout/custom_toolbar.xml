@@ -23,7 +23,7 @@
                 android:layout_width="242dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:text="LEADERBOAD"
+                android:text="@string/app_name"
                 android:textColor="@color/colorAccent"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -35,8 +35,7 @@
                 android:layout_toRightOf="@id/headingTextView"
                 android:background="@drawable/ripple"
                 android:paddingTop="1dp"
-                android:text="Submit"
-                android:textAllCaps="false"
+                android:text="@string/submit"
                 android:textColor="@color/colorPrimary"
                 android:textSize="17sp"
                 android:textStyle="bold"

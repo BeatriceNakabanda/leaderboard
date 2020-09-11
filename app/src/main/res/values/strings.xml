@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">LEADERBOARD</string>
     <string name="project_submission">Project Submission</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="project_on_git">Project On GITHUB (link)</string>
+    <string name="submit">Submit</string>
 
 </resources>
