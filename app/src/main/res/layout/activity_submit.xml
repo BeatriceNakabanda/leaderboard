@@ -51,65 +51,96 @@
             android:layout_marginBottom="50dp"
             android:orientation="horizontal">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/firstName"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:background="@drawable/edit_text"
-                android:hint="First Name"
-                android:paddingStart="6dp"
-                android:textColorHint="#717171"/>
+                app:errorEnabled="true">
 
-            <EditText
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text"
+                    android:textColorHint="#717171"
+                    android:hint="First Name"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/lastName"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:background="@drawable/edit_text"
-                android:hint="Last Name"
-                android:paddingStart="6dp"
-                android:textColorHint="#717171"/>
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="6dp"
+                    android:textColorHint="#717171"
+                    android:background="@drawable/edit_text"
+                    android:hint="Last Name"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
 
-        <EditText
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailAddress"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
             android:layout_marginBottom="48dp"
-            android:background="@drawable/edit_text"
-            android:hint="Email Address"
-            android:paddingStart="6dp"
-            android:textColorHint="#717171"/>
+            android:layout_gravity="center"
+            app:errorEnabled="true">
 
-        <EditText
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email Address"
+                android:paddingStart="6dp"
+                android:textColorHint="#717171"
+                android:background="@drawable/edit_text"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/githubLink"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
             android:layout_marginBottom="48dp"
-            android:background="@drawable/edit_text"
-            android:hint="Project On GITHUB (link)"
-            android:paddingStart="6dp"
-            android:textColorHint="#717171"/>
+            android:layout_gravity="center"
+            app:errorEnabled="true">
 
-        <Button
-            android:id="@+id/submit_project"
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text"
+                android:paddingStart="6dp"
+                android:textColorHint="#717171"
+                android:hint="Project On GITHUB (link)" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/submitProjectButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:paddingHorizontal="60dp"
-            android:background="@drawable/submit_background"
             android:text="Submit"
             android:textSize="22sp"
             android:textStyle="bold"
             android:textColor="#fff"
+            app:backgroundTint="#ffae45"
             android:textAllCaps="false"/>
     </LinearLayout>
 

@@ -5,9 +5,9 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class ApiClient {
-    //define base url
-    private static final String URL = "https://gadsapi.herokuapp.com";
+public class SubmitProjectApiClient {
+    private static final String BASEURL =
+            "https://docs.google.com/forms/d/e/";
 
     //create logger
     private static HttpLoggingInterceptor logger =
@@ -16,7 +16,7 @@ public class ApiClient {
     private static OkHttpClient.Builder okHttp =
             new OkHttpClient.Builder().addInterceptor(logger);
 
-    private static Retrofit.Builder builder = new Retrofit.Builder().baseUrl(URL)
+    private static Retrofit.Builder builder = new Retrofit.Builder().baseUrl(BASEURL)
             .addConverterFactory(GsonConverterFactory.create())
             .client(okHttp.build());
     private static Retrofit retrofit = builder.build();
