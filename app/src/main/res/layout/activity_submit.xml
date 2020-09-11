@@ -54,7 +54,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/firstName"
                 android:layout_width="0dp"
-                android:layout_height="48dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
                 app:errorEnabled="true">
@@ -72,7 +72,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/lastName"
                 android:layout_width="0dp"
-                android:layout_height="48dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
                 app:errorEnabled="true">
@@ -92,7 +92,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailAddress"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
             android:layout_marginBottom="48dp"
@@ -113,7 +113,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/githubLink"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
             android:layout_marginBottom="48dp"
@@ -137,6 +137,9 @@
             android:layout_marginTop="10dp"
             android:paddingHorizontal="60dp"
             android:text="Submit"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="submitProject"
             android:textSize="22sp"
             android:textStyle="bold"
             android:textColor="#fff"
