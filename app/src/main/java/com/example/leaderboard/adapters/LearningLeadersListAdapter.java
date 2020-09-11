@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -42,23 +41,22 @@ public class LearningLeadersListAdapter extends RecyclerView.Adapter<LearningLea
     class MyViewHolder extends RecyclerView.ViewHolder{
         TextView learnerName;
         ImageView learnerBadge;
-        TextView learningHours;
-        TextView learnerCountry;
+        TextView learnerDetails;
 
         public MyViewHolder(View itemView) {
             super(itemView);
             learnerName = (TextView)itemView.findViewById(R.id.learnerNameTextView);
-//            learnerCountry = (TextView)itemView.findViewById(R.id.learningHoursTextView);
-            learningHours = (TextView)itemView.findViewById(R.id.learningHoursTextView);
+            learnerDetails = (TextView)itemView.findViewById(R.id.learnerDetailsTextView);
             learnerBadge = (ImageView)itemView.findViewById(R.id.topLearnerImage);
         }
     }
 
     @Override
     public void onBindViewHolder(LearningLeadersListAdapter.MyViewHolder holder, int position) {
+        String learnerInfo = learningLeaderList.get(position).getHours() + " learning hours, "
+                + learningLeaderList.get(position).getCountry();
         holder.learnerName.setText(learningLeaderList.get(position).getName().toString());
-//        holder.learnerCountry.setText(learningLeaderList.get(position).getCountry().toString());
-//        holder.learningHours.setText(learningLeaderList.get(position).getHours());
+        holder.learnerDetails.setText(learnerInfo);
         Glide.with(context).load(learningLeaderList.get(position).getBadgeUrl())
                 .apply(RequestOptions.centerCropTransform()).into(holder.learnerBadge);
     }
