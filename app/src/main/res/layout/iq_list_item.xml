@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -16,35 +17,44 @@
 
             <ImageView
                 android:id="@+id/topiqLearnerImage"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:paddingStart="16dp"
-                android:src="@drawable/skill_iq"/>
+                android:layout_width="131dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:adjustViewBounds="true"
+                android:maxWidth="60dp"
+                android:scaleType="fitXY"
+                tool:src="@drawable/skill_iq" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_toRightOf="@id/topiqLearnerImage"
+                android:orientation="vertical"
                 android:padding="16dp">
 
                 <TextView
                     android:id="@+id/iqLeaderNameTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
                     android:fontFamily="sans-serif"
-                    android:layout_marginTop="5dp"
                     android:textAppearance="?android:textAppearanceMedium"
-                    android:textColor="#2B3D4D"/>
+                    android:textColor="#2B3D4D" />
 
                 <TextView
-                    android:id="@+id/iqHoursTextView"
+                    android:id="@+id/iqDetailsTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
                     android:fontFamily="sans-serif"
-                    android:layout_marginTop="5dp"
                     android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="#AEB6BD"/>
+                    android:textColor="#AEB6BD" />
 
             </LinearLayout>
         </RelativeLayout>

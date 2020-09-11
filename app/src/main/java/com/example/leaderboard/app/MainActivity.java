@@ -7,8 +7,12 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
+import com.example.leaderboard.R;
 import com.example.leaderboard.databinding.ActivityMainBinding;
 import com.example.leaderboard.fragments.LearningLeadersFragment;
 import com.example.leaderboard.fragments.SkillsIQLeadersFragment;
@@ -26,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
             setContentView(binding.getRoot());
             init();
+
+            submitProject();
     }
     private void init(){
 
@@ -45,6 +51,17 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }).attach();
 
+
+    }
+    public void submitProject() {
+        TextView submitButton = (TextView) findViewById(R.id.submitButton);
+
+        submitButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SubmitActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

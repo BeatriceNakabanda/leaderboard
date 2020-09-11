@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".app.SubmitActivity">
+
+    <ImageView
+        android:id="@+id/toolBarLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_marginBottom="6dp"
+        android:src="@drawable/gads" />
+
+    <TextView
+        android:id="@+id/projectSubmission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolBarLogo"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="6dp"
+        android:text="Project Submission"
+        android:textColor="#ffae45"
+        android:textSize="19sp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/dividerLine"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/projectSubmission"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="94dp"
+        android:src="@drawable/divider"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dividerLine"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="50dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/firstName"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text"
+                android:hint="First Name"
+                android:paddingStart="6dp"
+                android:textColorHint="#717171"/>
+
+            <EditText
+                android:id="@+id/lastName"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text"
+                android:hint="Last Name"
+                android:paddingStart="6dp"
+                android:textColorHint="#717171"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/emailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="48dp"
+            android:background="@drawable/edit_text"
+            android:hint="Email Address"
+            android:paddingStart="6dp"
+            android:textColorHint="#717171"/>
+
+        <EditText
+            android:id="@+id/githubLink"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="48dp"
+            android:background="@drawable/edit_text"
+            android:hint="Project On GITHUB (link)"
+            android:paddingStart="6dp"
+            android:textColorHint="#717171"/>
+
+        <Button
+            android:id="@+id/submit_project"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="60dp"
+            android:background="@drawable/submit_background"
+            android:text="Submit"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+</RelativeLayout>

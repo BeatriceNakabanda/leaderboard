@@ -45,9 +45,9 @@ public class LearningLeadersListAdapter extends RecyclerView.Adapter<LearningLea
 
         public MyViewHolder(View itemView) {
             super(itemView);
-            learnerName = (TextView)itemView.findViewById(R.id.learnerNameTextView);
-            learnerDetails = (TextView)itemView.findViewById(R.id.learnerDetailsTextView);
-            learnerBadge = (ImageView)itemView.findViewById(R.id.topLearnerImage);
+            learnerName = itemView.findViewById(R.id.learnerNameTextView);
+            learnerDetails = itemView.findViewById(R.id.learnerDetailsTextView);
+            learnerBadge = itemView.findViewById(R.id.topLearnerImage);
         }
     }
 
@@ -55,7 +55,7 @@ public class LearningLeadersListAdapter extends RecyclerView.Adapter<LearningLea
     public void onBindViewHolder(LearningLeadersListAdapter.MyViewHolder holder, int position) {
         String learnerInfo = learningLeaderList.get(position).getHours() + " learning hours, "
                 + learningLeaderList.get(position).getCountry();
-        holder.learnerName.setText(learningLeaderList.get(position).getName().toString());
+        holder.learnerName.setText(learningLeaderList.get(position).getName());
         holder.learnerDetails.setText(learnerInfo);
         Glide.with(context).load(learningLeaderList.get(position).getBadgeUrl())
                 .apply(RequestOptions.centerCropTransform()).into(holder.learnerBadge);

@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".app.MainActivity" />
+        <activity android:name=".app.SubmitActivity" />
     </application>
 
 </manifest>
