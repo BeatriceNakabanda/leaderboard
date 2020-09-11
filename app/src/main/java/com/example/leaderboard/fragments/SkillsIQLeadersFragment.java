@@ -14,7 +14,7 @@ import com.example.leaderboard.R;
 public class SkillsIQLeadersFragment extends Fragment {
 
     public SkillsIQLeadersFragment(){
-        Log.i("Fragment check", "LearningLeadersFragment created");
+        Log.i("Fragment check", "Skills Iq leaders board created");
     }
 
     @Override

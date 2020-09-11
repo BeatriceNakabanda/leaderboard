@@ -7,10 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".fragments.LearningLeadersFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        android:text="LearningLeaders"/>
+    <include android:id="@+id/learning_leaders_list"
+        layout="@layout/learners_list"/>
 
 </LinearLayout>
